@@ -1,7 +1,7 @@
 FROM centos:7
 
-RUN yum group install -y "Development Tools" > /dev/null \
- && git clone git://github.com/wiredtiger/wiredtiger.git > /dev/null \
+RUN yum group install -y "Development Tools" \
+ && git clone git://github.com/wiredtiger/wiredtiger.git \
  && cd wiredtiger \
  && ./autogen.sh \
  && ./configure \
